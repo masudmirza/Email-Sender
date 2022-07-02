@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer')
 
 const sendMail = (req,res) => {
     const transporter = nodemailer.createTransport({
@@ -7,7 +7,7 @@ const sendMail = (req,res) => {
             user: process.env.EMAIL, // your email address
             pass: process.env.PASSWORD // your password
         }
-    });
+    })
         
     // mail deitails
     const mailInfo = {
@@ -21,13 +21,13 @@ const sendMail = (req,res) => {
     // send mail with defined transport object
     transporter.sendMail(mailInfo , (err , info) => {
         if(err){
-            console.log("Error occured ",err);
-            res.render('main' , {message: 'Sorry there was an error occured!'});
-        }else{
-            console.log("Email send successfully ", info);
-            res.render('main' , {message: 'Email Sended Successfully!'});
+            console.log("Error occured ",err)
+            res.render('main' , {message: 'Sorry there was an error occured!'})
+        }else {
+            console.log("Email send successfully ", info)
+            res.render('main' , {message: 'Email Sended Successfully!'})
         }
-    });        
+    })     
 }
 
-module.exports = sendMail;
+module.exports = sendMail

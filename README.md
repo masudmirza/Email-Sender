@@ -23,6 +23,8 @@ npm run dev
 6. Open your browser and enter this url: http://localhost:5000
 ---
 ## **Technologies**
+- HTML
+- CSS
 - Node.js
 - Express.js
 - Express Handlebars
